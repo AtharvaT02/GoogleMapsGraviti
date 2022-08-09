@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 .container{
     margin: 0;
     height: 90vh;
@@ -34,17 +35,33 @@
         color: #FFFFFF;
         font-size: 16px;
     }
+    .icon{
+        position: absolute;
+        margin: 1rem;
+        font-size: 2rem;
+        color: rgb(252, 61, 61);
+    }
+
     input{
         height: 56px;
         width: 272px;
         border-radius: 4px;
         border: none;
+        text-align: center;
+        padding: 0.5rem;
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 120%;
+        color: #4D6475;
+
     }
     label{
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 18px;
         line-height: 150%;
     }
     .distancetext{
@@ -52,7 +69,8 @@
         height: 70px;
         width: 500px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
         background-color: #FFFFFF;
         font-family: 'Work Sans';
         font-style: normal;
@@ -60,9 +78,14 @@
         font-size: 20px;
         left: 15%;
         border-radius: 0.8rem 0.8rem 0 0;
+        p{
+            margin: 1.2rem;
+        }
         .numdis{
             font-weight: 900;
+            font-size: 30px;
             color: #1B31A8;
+
         }
     }
     .distxtsub{

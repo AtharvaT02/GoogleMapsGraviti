@@ -1,5 +1,7 @@
 import React from 'react'
 import '../scss/main.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import {
   SkeletonText,
 } from '@chakra-ui/react'
@@ -19,7 +21,6 @@ function Hero() {
     libraries: ['places'],
   })
 
-  const [map, setMap] = useState(/** @type google.maps.Map */(null))
   const [directionsResponse, setDirectionsResponse] = useState(null)
   const [distance, setDistance] = useState('')
   const [origin, setOrigin] = useState(null)
@@ -64,13 +65,16 @@ function Hero() {
             <div className="inputform">
               <div className="origininp">
                 <label htmlFor="origin">Origin</label><br />
+                <FontAwesomeIcon className='icon' icon={faLocationDot} />
                 <Autocomplete>
+                  
                   <input id="origin" type='text' placeholder='Origin' ref={originRef} onChange={getOrigin} />
                 </Autocomplete>
 
               </div>
               <div className="destinp">
                 <label htmlFor="destination">Destination</label><br />
+                <FontAwesomeIcon className='icon' icon={faLocationDot} />
                 <Autocomplete>
                   <input id="destination" type='text' placeholder='Destination' ref={destinationRef} onChange={getDest} />
                 </Autocomplete>
